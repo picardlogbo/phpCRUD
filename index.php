@@ -69,32 +69,34 @@
                 <h5 class="modal-title" id="exampleModalLabel">Enregistrer un produit</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
+              <form action="traitements/produits/ajout.php" method="POST">
+
               <div class="modal-body">
                 <!----------Formulaire-------------->
+              
                 <div class="form-group">
-</div>
+                  <label class="col-form-label mt-4" for="inputDefault">Libelle</label>
+                  <input type="text" class="form-control" name="libelle" placeholder="Nom du Produit" id="inputDefault">
+                  <label class="col-form-label mt-4" for="inputDefault">Code</label>
+                  <input type="text" class="form-control" name="code" placeholder="Code du produit" id="inputDefault">
 
-                    <div class="form-group">
-                      <label class="col-form-label mt-4" for="inputDefault">Libelle</label>
-                      <input type="text" class="form-control" placeholder="Nom du Produit" id="inputDefault">
-                      <label class="col-form-label mt-4" for="inputDefault">Code</label>
-                      <input type="text" class="form-control" placeholder="Code du produit" id="inputDefault">
-                      
-                      <div class="form-group">
-                      <label class="form-label mt-4">Prix</label>
-                       <input type="text" class="form-control" placeholder="saisir prix du produit" id="inputDefault">
-                      <label class="col-form-label mt-4" for="inputDefault">Description</label>
-                      <input type="text" class="form-control" placeholder="Decrire le produit" id="inputDefault">
-                    </div>
-                    </div>
-
+                  <div class="form-group">
+                    <label class="form-label mt-4">Prix</label>
+                    <input type="text" class="form-control" name="prix" placeholder="saisir prix du produit" id="inputDefault">
+                    <label for="exampleTextarea" class="form-label mt-4"  >Description</label>
+                    <textarea class="form-control"  name="description" id="exampleTextarea"  rows="3"></textarea>
+                  </div>
+                </div>
 
                 <!-------End Formulaire----------------->
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">save</button>
+                <button type="submit" class="btn btn-primary">save</button>
               </div>
+
+              </form>
+             
             </div>
           </div>
         </div>
