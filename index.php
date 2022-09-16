@@ -66,15 +66,34 @@
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Enregistrer un produit</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                ...
+                <!----------Formulaire-------------->
+                <div class="form-group">
+</div>
+
+                    <div class="form-group">
+                      <label class="col-form-label mt-4" for="inputDefault">Libelle</label>
+                      <input type="text" class="form-control" placeholder="Nom du Produit" id="inputDefault">
+                      <label class="col-form-label mt-4" for="inputDefault">Code</label>
+                      <input type="text" class="form-control" placeholder="Code du produit" id="inputDefault">
+                      
+                      <div class="form-group">
+                      <label class="form-label mt-4">Prix</label>
+                       <input type="text" class="form-control" placeholder="saisir prix du produit" id="inputDefault">
+                      <label class="col-form-label mt-4" for="inputDefault">Description</label>
+                      <input type="text" class="form-control" placeholder="Decrire le produit" id="inputDefault">
+                    </div>
+                    </div>
+
+
+                <!-------End Formulaire----------------->
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-primary">save</button>
               </div>
             </div>
           </div>
