@@ -50,6 +50,40 @@
     </div>
   </div>
 </nav>
+
+<!------Tableau---------------->
+
+<div class="tableau mt-5">
+  <div class="container">
+    <div class="d-flex justify-content-between">
+    <h4>Liste des produits</h4>
+    <div class="btn btn-primary">
+      Ajouter
+    </div>
+    </div>
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Libelle</th>
+      <th scope="col">Code</th>
+      <th scope="col">Prix</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Chaussure</td>
+      <td>AS/2014</td>
+      <td>@2500</td>
+      <td>Chaussure de plage</td>
+    </tr>
+    
+  </tbody>
+</table>
+  </div>
+</div>
 </body>
 
 </html>
