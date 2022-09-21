@@ -51,10 +51,12 @@
     </div>
   </nav>
 
+
   <!------Tableau---------------->
 
   <div class="tableau mt-5">
     <div class="container">
+      
       <div class="d-flex justify-content-between">
         <h4>Liste des produits</h4>
         <button class="btn btn-primary" id="btnadd" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -62,6 +64,7 @@
         </button>
 
         <!-- Modal -->
+        
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -69,8 +72,8 @@
                 <h5 class="modal-title" id="exampleModalLabel">Enregistrer un produit</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
+             
               <form action="traitements/produits/ajout.php" method="POST">
-
               <div class="modal-body">
                 <!----------Formulaire-------------->
               
@@ -92,14 +95,13 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary">save</button>
+                <button type="submit" name="add_produit" class="btn btn-primary">save</button>
               </div>
-
               </form>
-             
             </div>
           </div>
         </div>
+
       </div>
 
       <table class="table" id="matable">
@@ -111,6 +113,7 @@
             <th scope="col">Code</th>
             <th scope="col">Prix</th>
             <th scope="col">Description</th>
+            <th scope="col"></th>
           </tr>
         </thead>
         <tbody>
@@ -128,6 +131,48 @@
                 <td> <?= $item['code']; ?></td>
                 <td> <?= $item['prix']; ?></td>
                 <td> <?= $item['description']; ?></td>
+                <td><a href="" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModalUptadte<?= $item['ID']; ?>">Uptade</a>
+                <a href="" class="btn btn-danger">Delete</a>
+              </td>
+
+              <!---- Uptade modal-------->
+                <div class="modal fade" id="exampleModalUptadte<?= $item['ID']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modifier un produit</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                    
+                      <form action="traitements/produits/ajout.php" method="POST">
+                      <div class="modal-body">
+                        <!----------Formulaire-------------->
+                      
+                        <div class="form-group">
+                          <label class="col-form-label mt-4" for="inputDefault">Libelle</label>
+                          <input type="text" class="form-control" value="<?= $item['libelle']; ?>" name="libelle" placeholder="Nom du Produit" id="inputDefault">
+                          <label class="col-form-label mt-4" for="inputDefault">Code</label>
+                          <input type="text" class="form-control" value="<?= $item['code']; ?>" name="code" placeholder="Code du produit" id="inputDefault">
+
+                          <div class="form-group">
+                            <label class="form-label mt-4">Prix</label>
+                            <input type="text" class="form-control" value="<?= $item['prix']; ?>" name="prix" placeholder="saisir prix du produit" id="inputDefault">
+                            <label for="exampleTextarea" class="form-label mt-4"  >Description</label>
+                            <textarea class="form-control"   name="description" id="exampleTextarea"  rows="3"><?= $item['description']; ?></textarea>
+                          </div>
+                        </div>
+
+                        <!-------End Formulaire----------------->
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" name="add_produit" class="btn btn-primary">save</button>
+                      </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+
               </tr>
           <?php                     }
           }
