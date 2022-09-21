@@ -144,7 +144,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
                     
-                      <form action="traitements/produits/ajout.php" method="POST">
+                      <form action="traitements/produits/update.php" method="POST">
                       <div class="modal-body">
                         <!----------Formulaire-------------->
                       
@@ -157,6 +157,7 @@
                           <div class="form-group">
                             <label class="form-label mt-4">Prix</label>
                             <input type="text" class="form-control" value="<?= $item['prix']; ?>" name="prix" placeholder="saisir prix du produit" id="inputDefault">
+                            <input type="hidden" value="<?= $item['ID']; ?>" name="id">
                             <label for="exampleTextarea" class="form-label mt-4"  >Description</label>
                             <textarea class="form-control"   name="description" id="exampleTextarea"  rows="3"><?= $item['description']; ?></textarea>
                           </div>
@@ -166,7 +167,7 @@
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" name="add_produit" class="btn btn-primary">save</button>
+                        <button type="submit" name="update_produit" class="btn btn-primary">Save</button>
                       </div>
                       </form>
                     </div>
