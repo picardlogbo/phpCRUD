@@ -18,7 +18,7 @@ if (isset($_POST['add_produit'])) {
     $result = $conn->query($sql);
 
 
-    header('Location:../../index.php');
+    header('Location:../../produit.php');
 }
 
 
