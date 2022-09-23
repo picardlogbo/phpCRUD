@@ -2,7 +2,6 @@
 include('../../database/Connect_dataBase.php');
 
 // var_dump($_POST);
-
 // die();
 if (isset($_POST['update_produit'])) {
     $_libelle =  $_POST['libelle'];
